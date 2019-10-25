@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Train Schedule</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Anytime is Train time!</h1>
+        <p class="lead">Choo Choo!</p>
+        <hr class="my-4">
+        
+        <p class="lead">
+        </div>
+                
+        <div class="row my-4">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">ADD TRAIN</div>
+
+                    <div class="card-body">
+
+                        <form role="form">
+
+                            <div class="form-group">
+                                <label for="train-name">Train Name:</label>
+                                <input type="text" class="form-control" id="train-name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="destination">Destination:</label>
+                                <input type="text" class="form-control" id="destination">
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="first-time">First Arrival Time(mins)</label>
+                                        <input type="text" class="form-control" id="first-hrs">
+                                    </div>
+                                    <div class="col">
+                                        <label for="first-mins">Next Arrival Time</label>
+                                        <input type="text" class="form-control" id="first-mins">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="frequency">Frequency (min):</label>
+                                <input type="number" class="form-control" id="frequency">
+                            </div>
+
+                            <button type="submit" class="btn btn-dark" id="submit">Submit</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Train Name</th>
+        <th scope="col">Destination</th>
+        <th scope="col">First Train</th>
+        <th scope="col">Frequency (min)</th>
+        <th scope="col">Minutes Away</th>
+        <th scope="col">Remove Train</th>
+      </tr>
+    </thead>
+  </table>
+                
+        
+   
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+
+    <script src="train-scheduler/assets/js/main.js"></script>
